@@ -129,3 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
     collisionSelect.addEventListener("change", applyFilters);
 });
 
+
