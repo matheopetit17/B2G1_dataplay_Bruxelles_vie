@@ -12,10 +12,13 @@ body {
     overflow: hidden;
     max-width: 800px;
 }
-.title {
-  color: $c-alt;
+.motif{
+  z-index: -1;
+  overflow: inherit;
+  position: fixed;
+  width: 100vw;
+  left: 1px;
 }
-
 .tunnel {
   position: relative;
   width: 100%;
@@ -52,7 +55,6 @@ body {
   border-top: none;
   border-color: white;
 }
-
 .car-container {
   position: fixed;
   text-align: center;
@@ -72,8 +74,13 @@ body {
   transform: translate(-50%, -50%);
   color: white;
   font-size: clamp(1rem, 0.4737rem + 2.1053vw, 3rem);
-  width: 300%;
+  width: 350%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.textRoute.hidden {
+  opacity: 0;
 }
 .fondNoir {
   background-color: black;
@@ -187,6 +194,36 @@ body {
   z-index: 5;
 }
 .Accident{
+  scale: 50%;
+}
+
+.leftPan {
+  position: absolute;
+  top: -15%;
+  left: -5%; 
+  z-index: 5;
+}
+
+.rightPan {
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  z-index: 5;
+}
+.leftPan2 {
+  position: absolute;
+  top: 15%;
+  left: -5%; 
+  z-index: 5;
+}
+
+.rightPan2 {
+  position: absolute;
+  top: 15%;
+  right: -5%;
+  z-index: 5;
+}
+.Pan{
   scale: 50%;
 }
 
