@@ -18,6 +18,8 @@ body {
   position: fixed;
   width: 100vw;
   left: 1px;
+  top: 1px;
+  filter: opacity(0.6);
 }
 .tunnel {
   position: relative;
