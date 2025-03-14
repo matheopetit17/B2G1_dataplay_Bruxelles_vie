@@ -2,6 +2,8 @@
 @import 'components/type';
 
 
+
+
 .section--first{
     background-color: black;
     color: white;
@@ -145,5 +147,32 @@ h1 {
     }
 
 
+}
+
+@media (min-width: 1200px){
+    .grid {
+        display: grid;
+        grid-template-columns:repeat(7, 1fr);
+        column-gap: 30px;
+        padding: 0 30px;
+    }
+
+    body {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+       
+    }
+
+    h1 {
+        
+        font-size: 112px;
+        text-align: center;
+    }
+
+    .dgrid3{
+        grid-column-start: 3;
+        grid-column-end: 6;
+    }
 }
  
