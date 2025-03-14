@@ -38,21 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tunnels.forEach(tunnel => observer.observe(tunnel));
 
-    // Observer spécifique pour le dernier tunnel
     const lastTunnelObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const carRect = carContainer.getBoundingClientRect();
                 const tunnelRect = lastTunnel.getBoundingClientRect();
 
-                // Vérifie si la voiture est bien alignée avec le dernier tunnel
                 if (carRect.top >= tunnelRect.top && carRect.bottom <= tunnelRect.bottom) {
                     carContainer.style.position = "relative";
                 }
             }
         });
-    }, { threshold: 0.9 }); // Déclenche seulement quand la voiture est bien dans le tunnel
-
+    }, { threshold: 0.9 });
     lastTunnelObserver.observe(lastTunnel);
 });
 
